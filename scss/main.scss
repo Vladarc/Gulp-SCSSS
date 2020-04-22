@@ -235,10 +235,27 @@ background-position:20vw;
 .scroll-down{
 text-align: center;  
 }
-.scroll-down__link{
-font-size: 3.5rem;
-color: #000;
-}   
+.icon{
+    &-scroll{
+        width: 25px;
+        height: 40px;
+    }
+  &-cart{
+      height: 45px;
+      width: 57px;
+    
+  }
+    &-handground{
+        width: 57px;
+        height: 52px;
+    }
+    &-planet,
+    &-carrot{
+        width: 55px;
+        height: 55px;
+    }
+}
+
 .wrapper-img{
 overflow: hidden;
 }
