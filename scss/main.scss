@@ -3,13 +3,14 @@ box-sizing: border-box;
 }
 html{
 font-size: 10px;
-
+scroll-behavior: smooth;
 }
 body{
 padding: 0;
 margin: 0;
 font-size: 1.6rem;
 font-family: 'Raleway', sans-serif;
+
 }
 .ul--normalize{
 list-style: none;
@@ -24,6 +25,7 @@ width: 100%;
 }
 .container{
 max-width: 1200px;
+
 margin: 0 auto;
 }
 .header { 
@@ -157,7 +159,7 @@ line-height: 1;
 padding: 25px 0;
 font-weight: 300;
 font-size: 1.7rem;
-color: 262626;
+color: #262626;
 line-height: 1.4;
 }
 .article__title--size{
