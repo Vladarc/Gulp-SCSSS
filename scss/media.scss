@@ -22,7 +22,8 @@
 .section--tomato{
 
     .row{
-        flex-flow: wrap row;
+        flex-direction: column-reverse;
+
         
     }
     .col--1-4{
@@ -221,7 +222,7 @@ flex-flow: wrap row;
    
     .section--tomato{
         .wrap-postion__title{
-            font-size: 4rem;
+            font-size: 5rem;
         }
     }
     .section--gallery{
