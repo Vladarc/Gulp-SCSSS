@@ -25,26 +25,125 @@ width: 100%;
 }
 .container{
 max-width: 1200px;
-
+padding: 0 15px;
 margin: 0 auto;
 }
 .header { 
-position: absolute;
+position: fixed;
 width: 100%;
-top: 40px;
+
+padding-top: 20px;
+}
+
+.opened{
+    overflow: hidden;
+}
+
+
+
+.mobileMenu{
+    display: none;
+
+    @media screen and (max-width:992px){
+        display: block;
+        z-index: 6;
+        position: absolute;
+        right: 40px;
+        transform: all .4s ease-in;
+      & span{
+          position: relative;
+          width: 36px;
+          height: 6px;
+          background: #000;
+          display: block;
+          transition: .5s;
+          margin-bottom: 8px;
+             &:nth-child(1){
+                transform-origin: left;
+            }
+             &:nth-child(2){
+                transform-origin: center;
+            }
+             &:nth-child(3){
+                transform-origin: left;
+            }
+            .opened  & {
+                background:#fff;
+                border-radius: 50%;
+            }
+            .opened &:nth-child(1){
+               transform: rotate(45deg);
+               top: 2.5px;
+               left: 2px;
+           
+            }
+            .opened &:nth-child(2){
+               transform: rotate(315deg);
+               top: 1px;
+               right:3px;
+              
+            }
+            .opened &:nth-child(3){
+               transform: scaleX(0);
+            }
+      }
+        
+}
+}
+
+.nav{
+    @media screen and (max-width:992px){
+        will-change: transform;
+        transform-origin: 95% 20px;
+        transform: translate(-25px,20px) scale(0.1);
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        z-index: -1;
+        right: 0;
+        background-color: #00c2c2;
+        transition: all .5s ease-in;
+        .opened &{
+            
+            z-index: 4;
+            transform: translate(0,0) scale(1);
+           
+        }
+    }
+    &__list{
+        @media screen and (max-width:992px){
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
 }
 .header__logo { 
 margin: 0;
 }
+
 .nav__item { 
 display: inline-block;
 margin: 0 30px  0 0;
+@media screen and (max-width:992px){
+    padding: 1em 0;
+    margin: 0;
+}
 }
 .nav__link { 
 color: #262626;
 font-weight: 600;
 padding-top: 5px;
 text-transform: uppercase;
+@media screen and (max-width:992px){
+    font-size: 4rem;
+    color: #fff;
+}
+
 }
 .nav__link:hover,
 .nav__link:focus,
@@ -58,6 +157,7 @@ transition: border .3s ease-out;
 .section{
 padding: 50px 0 50px;
 }
+
 .section--fresh-life,
 .section--contact{
  
@@ -164,6 +264,9 @@ line-height: 1.4;
 }
 .article__title--size{
     font-size: 9rem;
+    @media screen and (max-width:420px){
+        font-size: 6.5rem;
+    }
 }
 .article--color-white{
 color: #fff;
