@@ -12,6 +12,9 @@ padding: 5px;
 font-size: 2rem;
 font-weight: 700;
 color: #fff;
+@media screen and (max-width:340px){
+    font-size: 1.51rem;
+}
 }
 .section__blog{
     margin-bottom: 60px;
@@ -59,6 +62,9 @@ color: #fff;
         text-align: center;
         text-transform: uppercase;
         z-index: 2;
+        @media screen and (max-width:340px){
+            font-size:1.2rem;
+        }
         }
         .blog-news__description{
         position: absolute;
@@ -77,6 +83,9 @@ color: #fff;
         .blog-news__time--big{
         font-size: 3.2rem;
         line-height: 0.4;
+        @media screen and (max-width:340px){
+            font-size:2.2rem;
+        }
         }
         .btn--postion{
         position: relative;
